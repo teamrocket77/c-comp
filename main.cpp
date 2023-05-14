@@ -3,8 +3,10 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <variant>
 
 using namespace std;
+using Object = variant<nullptr_t, string, double, bool, int, char>;
 enum TokenType{
   LEFT_PAREN, 
   RIGHT_PAREN,
@@ -69,7 +71,6 @@ class Scanner{
   public:
   //vector<Token> scan_tokens(){
   void scan_tokens(){
-
     }
   static void conv_string(string s, char* ptr){
     int len = s.length();
@@ -78,18 +79,10 @@ class Scanner{
       ptr[i] = s[i];
       };
     }
+  private:
+    string source;
 };
 
-// void run_file(char *f_path){
-//   ifstream ifs(f_path, ifstream::in);
-//   char c = ifs.get();
-//   while (ifs.good()){
-//     cout << c;
-//     c = ifs.get();
-//   }
-//   ifs.close();
-//   cout << "Done reading file" << endl;
-// }
 
 class Lox{
   public:
