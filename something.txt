@@ -1,0 +1,3 @@
+We are now inside of a new file!
+I'm a new line
+me too I'm also a new line

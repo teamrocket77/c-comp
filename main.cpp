@@ -1,16 +1,10 @@
-#include <sys/_types/_ssize_t.h>
 #include <unistd.h>
-#include <fstream>
 #include <stdexcept>
 #include <iostream>
-
-#include <vector>
-#include <cstring>
-#include <cstdlib>
 #include <string>
 #include <fstream>
-using namespace std;
 
+using namespace std;
 enum TokenType{
   LEFT_PAREN, 
   RIGHT_PAREN,
@@ -23,7 +17,6 @@ enum TokenType{
   SEMICOLON,
   SLASH,
   STAR,
-
 
   BANG,
   BANG_EQUAL,
@@ -71,7 +64,6 @@ template <class T>
 ostream& operator<<(ostream &s, const Token<T> &t){
   return s << "Token: " << to_string(t.type) << " lexeme: " << t.lexeme << ", Type: " << to_string(t.literal) << " line: " <<  to_string(t.line) << endl;
 }
-
 
 class Scanner{
   public:
@@ -161,7 +153,7 @@ int main(int argc, char *argv[]){
   bool f = false;
   bool p = false;
   int c;
-  char *usage = "Usage: jlox [script]";
+  string usage = "Usage: jlox [script]";
   while ((c = getopt(argc, argv, "p::f::")) != -1 ){
     switch (c){
       case 'p':
