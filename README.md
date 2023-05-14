@@ -1,6 +1,6 @@
-To Run:
-  1.`mkdir build`
-  1.`cd build`
-  1.`cmake ..`
-  1.`make`
-  1.`./compiler`
+To Run: <br>
+&nbsp;&nbsp; 1.`mkdir build`<br>
+&nbsp;&nbsp; 2.`cd build`   <br>
+&nbsp;&nbsp; 3.`cmake ..`   <br>
+&nbsp;&nbsp; 4.`make`       <br>
+&nbsp;&nbsp; 5.`./compiler` <br>
